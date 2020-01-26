@@ -193,4 +193,21 @@
 		</dependency>
 	</dependencies>
 
+    <distributionManagement>
+        <!-- Publish the versioned releases here -->
+        <repository>
+            <id>bettrdata-nexus</id>
+            <name>bettrdata-nexus</name>
+            <url>http://nexus.phase3.io:8081/repository/maven-releases/</url>
+        </repository>
+
+        <!-- Publish the versioned releases here -->
+        <snapshotRepository>
+            <id>bettrdata-nexus</id>
+            <name>bettrdata-nexus</name>
+            <url>http://nexus.phase3.io:8081/repository/maven-snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+
 </project>

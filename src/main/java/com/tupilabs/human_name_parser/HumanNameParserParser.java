@@ -170,7 +170,7 @@ public class HumanNameParserParser {
         String nicknamesRegex = "(?i) ('|\\\"|\\(\\\"*'*)(.+?)('|\\\"|\\\"*'*\\)) "; // names that starts or end w/ an apostrophe break this
         String suffixRegex = "(?i)[,| ]+(("+suffixes+")$)";
         String postnominalRegex = "(?i)[,| ]+(("+postnominals+")$)";
-        String lastRegex = "(?i)(?!^)\\b([^ ]+ y |"+prefixes+")*[^ ]+$";
+        String lastRegex = "(?i)\\b([^ ]+ y |"+prefixes+")*[^ ]+$";
         String leadingInitRegex = "(?i)(^(.\\.*)(?= \\p{L}{2}))"; // note the lookahead, which isn't returned or replaced
         String salutationsRegex = "(?i)^("+salutations+"\\b)(\\.|\\s)+"; //salutation plus a word boundary \b
         String firstRegex = "(?i)^([^ ]+)";
@@ -190,7 +190,7 @@ public class HumanNameParserParser {
         // get the last name
         this.last = this.name.chopWithRegex(lastRegex, 0);
         if (StringUtils.isBlank(this.last)) {
-          throw new ParseException("Couldn't find a last name in '{" + this.name.getStr() + "}'.");
+          //throw new ParseException("Couldn't find a last name in '{" + this.name.getStr() + "}'.");
         }
         
         // get salutation, if there is one
@@ -202,7 +202,7 @@ public class HumanNameParserParser {
         // get the first name
         this.first = this.name.chopWithRegex(firstRegex, 0);
         if (StringUtils.isBlank(this.first)) {
-            throw new ParseException("Couldn't find a first name in '{" + this.name.getStr() + "}'");
+            //throw new ParseException("Couldn't find a first name in '{" + this.name.getStr() + "}'");
         }
         
         // if anything's left, that's the middle name

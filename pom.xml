@@ -28,7 +28,7 @@
 	<groupId>com.tupilabs</groupId>
 	<artifactId>human-name-parser</artifactId>
 
-	<version>0.1</version>
+	<version>0.2-SNAPSHOT</version>
 
 	<name>HumanNameParser.java</name>
 	<description>HumanNameParser.java, a Java port of HumanNameParser.php. Parser for human names in Java, all credit goes to @jasonpriem</description>
@@ -82,13 +82,6 @@
 		<developerConnection>scm:git:git@github.com:tupilabs/HumanNameParser.java.git</developerConnection>
 		<url>https://github.com/tupilabs/HumanNameParser.java</url>
 	</scm>
-
-	<distributionManagement>
-		<site>
-			<id>human-name-parser-github-site</id>
-			<url>gitsite:git@github.com/tupilabs/HumanNameParser.java.git</url>
-		</site>
-	</distributionManagement>
 
 	<build>
 		<extensions>
